@@ -1,0 +1,21 @@
+body {
+  font-family: $f-primary;
+  min-height: 100vh;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 50px 20px;
+
+  @media (min-width: $ml) {
+    width: 766px;
+  }
+
+  @media (min-width: $xl) {
+    width: 1024px;
+  }
+
+  @media (min-width: $xxl) {
+    width: 1200px;
+  }
+}

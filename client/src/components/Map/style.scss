@@ -1,0 +1,20 @@
+@import '@/styles/variables.scss';
+
+.hotel-map {
+	min-width: 250px;
+	min-height: 250px;
+	height: 100%;
+	width: 100%;
+}
+
+.hotel-map__marker {
+  display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	padding: 15px 10px;
+	text-align: center;
+	color: $c-white;
+	background-color: $c-dark;
+	border-radius: 50%;
+	transform: translate(-50%, -50%);
+}

@@ -1,0 +1,95 @@
+{
+  "extends": [
+    "tslint:latest",
+    "tslint-config-prettier",
+    "tslint-react-hooks"
+  ],
+  "rules": {
+      "no-empty-interface": false,
+      "no-return-await": false,
+      "forin": false,
+      "no-submodule-imports": false,
+      "no-implicit-dependencies": false,
+      "ordered-imports": false,
+      "object-literal-sort-keys": false,
+      "cyclomatic-complexity": false,
+      "increment-decrement": false,
+      "newline-before-return": false,
+      "no-parameter-properties": false,
+      "no-parameter-reassignment": false,
+      "no-unused-variable": false,
+      "typedef": false,
+      "unnecessary-else": false,
+      "semicolon": [true, "never"],
+
+      "quotemark": [true, "single", "jsx-double"],
+
+      "comment-format": {
+          "options": [
+              "check-space"
+          ]
+      },
+      "member-access": false,
+      "only-arrow-functions": {
+          "options": [
+              "allow-declarations",
+              "allow-named-functions"
+          ]
+      },
+
+      "completed-docs": false,
+      "no-any": false,
+      "no-magic-numbers": false,
+      "no-non-null-assertion": false,
+      "no-null-keyword": false,
+      "no-require-imports": false,
+      "no-unbound-method": false,
+      "no-unnecessary-qualifier": false,
+      "no-use-before-declare": false,
+      "no-void-expression": false,
+      "prefer-function-over-method": false,
+      "strict-comparisons": false,
+      "strict-type-predicates": false,
+      "triple-equals": {
+          "options": [
+              "allow-undefined-check"
+          ]
+      },
+
+      "ban": {
+          "options": [
+              [
+                  "describe",
+                  "only"
+              ],
+              [
+                  "it",
+                  "only"
+              ]
+          ]
+      },
+      "interface-name": false,
+      "max-classes-per-file": false,
+      "member-ordering": {
+          "options": {
+              "order": "statics-first"
+          }
+      },
+      "no-console": [true, "log"],
+      "no-debugger": true,
+      "no-duplicate-variable": [true, "check-parameters"],
+      "no-switch-case-fall-through": true,
+      "strict-boolean-expressions": false,
+      "switch-default": false,
+      "variable-name": {
+          "options": [
+              "ban-keywords",
+              "check-format",
+              "allow-leading-underscore",
+              "allow-pascal-case"
+          ]
+      },
+      "linebreak-style": false,
+      "react-hooks-nesting": "error"
+  }
+}

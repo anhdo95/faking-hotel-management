@@ -1,0 +1,45 @@
+@import '@/styles/variables.scss';
+@import '@/styles/z-index.scss';
+
+.header {
+  padding: 1em;
+  background-color: $c-dark-blue;
+  z-index: $header-z-index;
+}
+
+.header__stars {
+  .ant-slider-mark {
+    user-select: none;
+  }
+
+  .ant-slider-mark-text {
+    display: flex;
+  }
+}
+
+.header__min-price,
+.header__max-price {
+  &.ant-input-number {
+    width: 120px;
+    height: 100%;
+    margin: 0 0.25em;
+    border: none;
+  }
+
+  .ant-input-number-input {
+    height: 100%;
+    padding: 1em;
+    font-weight: 700;
+    border: none;
+  }
+}
+
+.header__search-btn {
+  &.ant-btn-icon-only {
+    width: 50px;
+    height: 50px;
+    color: $c-white;
+    background-color: $c-light-red;
+    border: none;
+  }
+}

@@ -1,0 +1,56 @@
+@import '@/styles/variables.scss';
+@import '@/styles/positions.scss';
+@import '@/styles/z-index.scss';
+@import '@/styles/mixins.scss';
+
+
+.hotel-detail {
+	display: flex;
+  flex-direction: column;
+  padding-bottom: 5em;
+}
+
+.hotel-detail__slider {
+	.slick-slide > div > div {
+		@include ratio(640, 360);
+	}
+
+	.slick-slide > div > div > img {
+		@extend .abs-full;
+	}
+
+	.slick-prev,
+	.slick-next {
+		width: 30px;
+		height: 30px;
+		z-index: $slick-arrow-z-index;
+
+		&:before {
+			font-size: 30px;
+		}
+	}
+
+	.slick-prev {
+		left: 10px;
+	}
+
+	.slick-next {
+		right: 10px;
+	}
+}
+
+.hotel-detail__map {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 5em;
+}
+
+.hotel-detail__map-inner {
+  width: 100%;
+  height: 500px;
+
+  @media (min-width: $m) {
+    width: 50%;
+  }
+}

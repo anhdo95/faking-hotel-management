@@ -1,0 +1,120 @@
+/* stylelint-disable */
+body, html, p {
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: none;
+}
+
+cite {
+  font-style: normal;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button,
+.button {
+  cursor: pointer;
+  -webkit-appearance: none;
+
+  &:focus {
+    outline: 1px solid var(--c-orange);
+    outline-offset: 4px;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+
+  &:focus {
+    outline: 1px solid var(--c-orange);
+    outline-offset: 4px;
+  }
+}
+
+input,
+textarea,
+select {
+  border-radius: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+select {
+  appearance: none;
+
+  &::-ms-expand {
+    display: none;
+  }
+}
+
+input[type="search"]::-webkit-search-decoration {
+  display: none;
+}
+
+input:-webkit-autofill {
+  background: transparent !important;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+nav {
+  margin: 0;
+}
+/* stylelint-enable */
+
