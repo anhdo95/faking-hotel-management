@@ -1,0 +1,17 @@
+version: "3.3"
+
+services:
+    web-app:
+        build: ./client
+        ports:
+            - 80:9000
+        depends_on: 
+            - web-api
+        
+    web-api:
+        build: ./server
+        ports:
+            - "3100:8080"
+        # volumes:
+        #     - ./server/:/usr/src/app
+        

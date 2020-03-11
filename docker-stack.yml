@@ -1,0 +1,26 @@
+version: '3.7'
+
+services:
+    web-app:
+        image: faking-hotel-management_web-app
+        ports:
+            - 80:9000
+        networks:
+            - overlay
+        deploy:
+            replicas: 2
+            restart_policy:
+                condition: on-failure
+
+    web-api:
+        image: faking-hotel-management_web-api
+        ports:
+            - 3100:8080
+        networks:
+            - overlay
+        deploy:
+            restart_policy:
+                condition: on-failure
+
+networks:
+    overlay:

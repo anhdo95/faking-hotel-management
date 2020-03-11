@@ -1,9 +1,9 @@
 export default {
   hotel: {
-    search: '/api/hotels/query_basic',
-    detail: '/api/hotel/:id',
+    search: `${process.env.BASE_URL}/hotels/query_basic`,
+    detail: `${process.env.BASE_URL}/hotel/:id`,
   },
   destination: {
-    search: '/api/destination/suggess'
+    search: `${process.env.BASE_URL}/destination/suggess`
   }
 }

@@ -1,11 +1,12 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const webpack = require('webpack')
 const common = require('./common.js')
 const { resolve } = require('./util')
 const merge = require('webpack-merge')
 
 module.exports = merge(common, {
-  cache: false,
+  cache: true,
 	mode: 'production',
 	output: {
     filename: '[name].bundle.js',
@@ -21,7 +22,6 @@ module.exports = merge(common, {
       },
       {
         test: /\.(sa|sc|c)ss$/,
-				exclude: /node_modules/,
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
@@ -30,6 +30,14 @@ module.exports = merge(common, {
           'sass-loader',
         ],
       },
+      {
+				test: /\.(eot|svg|ttf|woff|woff2|gif)$/i,
+				use: [
+					{
+						loader: 'url-loader',
+					},
+				],
+			},
 			{
 				test: /.*\.(gif|png|jp(e*)g|svg)$/i,
 				use: [
@@ -43,7 +51,6 @@ module.exports = merge(common, {
 	plugins: [
     new HtmlWebpackPlugin({
       template: resolve('public/index.html'),
-      filename: resolve('index.html'),
       minify: {
         removeComments: true,
         collapseWhitespace: true,
@@ -57,6 +64,11 @@ module.exports = merge(common, {
         minifySCSS: true,
         minifyURLs: true,
       },
+    }),
+    new webpack.DefinePlugin({
+      'process.env': {
+        BASE_URL: JSON.stringify('http://localhost:3100')
+      }
     }),
     new MiniCssExtractPlugin({
       filename: '[name].[hash].css',
